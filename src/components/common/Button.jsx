@@ -22,7 +22,7 @@ const Button = memo(
           px-4 py-2.5 rounded-md font-medium
           shadow-md hover:shadow-lg
           transition-all duration-300
-          hover:scale-[1.04] active:scale-95
+          hover:scale-[1.04] active:scale-95 cursor-pointer
           ${variants[variant]}
         `}
             >

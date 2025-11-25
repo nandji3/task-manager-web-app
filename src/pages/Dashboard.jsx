@@ -49,7 +49,7 @@ const Dashboard = () => {
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
             <header className="bg-white dark:bg-gray-800 shadow-sm">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                    <h1 className="text-3xl font-bold text-teal-600">TaskManager</h1>
+                    <h1 className="text-3xl font-bold text-teal-600 cursor-pointer" onClick={() => navigate("/dashboard")}>MTask</h1>
                     <div className="flex items-center gap-4">
                         <DarkModeToggle />
                         <Button onClick={handleLogout}>Logout</Button>

@@ -34,11 +34,11 @@ const TaskCard = memo(({ task }) => {
                         {task.status}
                     </span>
                     <div className="flex gap-4 text-gray-600">
-                        <button onClick={handleToggle} className="hover:text-teal-600">
+                        <button onClick={handleToggle} className="hover:text-teal-600 cursor-pointer">
                             {task.status === 'done' ? <FaUndo /> : <FaCheck />}
                         </button>
                         <Link to={`/task/${task.id}`} className="hover:text-teal-600"><FaEdit /></Link>
-                        <button onClick={() => setShowConfirm(true)} className="hover:text-red-600"><FaTrash /></button>
+                        <button onClick={() => setShowConfirm(true)} className="hover:text-red-600 cursor-pointer"><FaTrash /></button>
                     </div>
                 </div>
             </motion.div>
