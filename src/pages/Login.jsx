@@ -28,7 +28,7 @@ const Login = () => {
 
                 {/* Title */}
                 <h2 className="text-4xl font-extrabold text-center mb-6 text-teal-600">
-                    TaskManager
+                    MTask
                 </h2>
 
                 {/* Login Form */}
