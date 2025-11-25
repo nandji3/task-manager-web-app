@@ -4,6 +4,7 @@ import { addTask, updateTask } from '../../features/tasks/tasksSlice';
 import Input from '../common/Input';
 import Button from '../common/Button';
 import { FaSave, FaTimes } from 'react-icons/fa';
+import Swal from "sweetalert2";
 
 const TaskForm = ({ task, onClose }) => {
     const dispatch = useDispatch();
@@ -18,9 +19,27 @@ const TaskForm = ({ task, onClose }) => {
 
         if (task) {
             dispatch(updateTask({ ...task, ...formData }));
+
+            Swal.fire({
+                icon: "success",
+                title: "Task Updated!",
+                text: "Your task has been successfully updated.",
+                timer: 2000,
+                showConfirmButton: false,
+            });
+
         } else {
             dispatch(addTask(formData));
+
+            Swal.fire({
+                icon: "success",
+                title: "Task Added!",
+                text: "Your new task has been created.",
+                timer: 2000,
+                showConfirmButton: false,
+            });
         }
+
         onClose();
     };
 
